@@ -8,126 +8,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Patrick+Hand&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    /* Base styles */
-    html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden; /* Prevent horizontal scroll */
-      font-size: 16px; /* Set a proper base font size */
-    }
-    body {
-      /* Crayon-like font for body */
-      font-family: 'Patrick Hand', cursive;
-      background-color: #0f0f0f; /* Dark background */
-      color: #e0d8c3; /* Off-white text */
-      line-height: 1.8; /* Slightly increased line-height for readability */
-      font-size: 1.1rem; /* Slightly larger base font size */
-      position: relative; /* Needed for z-index stacking */
-      z-index: 1; /* Ensure content is above fireflies */
-    }
-    /* Style headings with flowing script font */
-    h1, h2, h3 {
-      font-family: 'Dancing Script', cursive;
-      color: #f5c58f; /* Keep original golden accent color */
-      font-weight: 700; /* Use the bold weight loaded for Dancing Script */
-      line-height: 1.3; /* Adjust line height for script font */
-      margin: 1.5rem 0; /* Add consistent margin */
-    }
-    /* Adjust H1 size specifically */
-    h1 {
-        font-size: 3.5rem; /* Larger size for main title */
-        margin-bottom: 2rem; /* Increased bottom margin for main title */
-    }
-    /* Adjust H2/H3 sizes */
-    h2 {
-        font-size: 2.5rem; /* Increased from 3.2rem to better fit the design */
-        margin-top: 2rem; /* Increased top margin */
-    }
-    h3 {
-        font-size: 2rem; /* Increased from 2.6rem to better fit the design */
-        margin-top: 2rem; /* Increased top margin */
-    }
-    /* Style blockquotes with pastel border */
-    blockquote {
-      font-style: italic;
-      color: #bfb59d; /* Muted quote color */
-      /* Pastel Peach/Orange border */
-      border-left: 4px solid #FFDDAA;
-      padding-left: 1.5em; /* Increased padding */
-      margin-left: 0; /* Reset default margin */
-      margin-top: 1em;
-      margin-bottom: 1em;
-    }
-    /* Style horizontal rules */
-    hr {
-      border: none; /* Remove default border */
-      height: 2px; /* Slightly thicker */
-      /* Pastel Mint Green */
-      background-color: #B4F8C8;
-      opacity: 0.6; /* Make it softer */
-      margin: 3em 0; /* More spacing */
-    }
-    /* Style list bullets with a pastel color */
-    ul {
-        list-style: none; /* Remove default */
-        padding-left: 0;
-    }
-    ul li::before {
-        content: '•';
-        /* Pastel Pink */
-        color: #FDCBF1;
-        font-weight: bold;
-        display: inline-block;
-        width: 1.5em; /* Add space */
-        margin-left: -1.5em; /* Align */
-        font-size: 1.2em; /* Make bullet slightly larger */
-    }
-
-
-    /* --- Firefly Animation --- */
-    .firefly-container {
-      position: fixed; /* Fixed position to stay in viewport */
-      top: 0;
-      left: 0;
-      width: 100vw; /* Full viewport width */
-      height: 100vh; /* Full viewport height */
-      pointer-events: none; /* Allow clicks to pass through */
-      z-index: 0; /* Behind the main content */
-      overflow: hidden; /* Hide overflow */
-    }
-    .firefly {
-      position: absolute;
-      display: block;
-      width: 6px;
-      height: 6px;
-      background: #ffe97f; /* Keep original firefly color */
-      border-radius: 50%; /* Make it round */
-      box-shadow: 0 0 10px 2px #ffe97f; /* Glowing effect */
-      animation: fly 10s linear infinite; /* Apply animation */
-      opacity: 0; /* Start hidden, fade in via animation */
-    }
-
-    /* Keyframes for the flying animation */
-    @keyframes fly {
-      0% {
-        transform: translate(var(--start-x), var(--start-y));
-        opacity: 0;
-      }
-      10%, 90% {
-        opacity: 0.9; /* Fade in and out */
-      }
-      50% {
-        transform: translate(calc(var(--start-x) + var(--move-x)), calc(var(--start-y) + var(--move-y)));
-        opacity: 0.3; /* Dimmer mid-flight */
-      }
-      100% {
-        transform: translate(var(--start-x), var(--start-y));
-        opacity: 0; /* Fade out */
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="morrowindel-style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="p-6 sm:p-10">
 
@@ -136,7 +18,7 @@
 
   <main class="max-w-3xl mx-auto space-y-8 relative z-10">
 
-    <h1 class="text-6xl font-bold mb-8">A Whispered Tale of the Shack of Quietude</h1>
+    <h1 class="text-6xl font-bold mb-8 text-center">The Silent Offering Bench</h1>
 
     <img
       src="images/The Silent Offering Bench.jpg"
