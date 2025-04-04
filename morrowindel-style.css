@@ -69,7 +69,18 @@ ul li::before {
   margin-left: -1.5em;
   font-size: 1.2em;
 }
+/* Links */
+a {
+  color: #B4F8C8;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
 
+a:hover {
+  color: #90E0E3;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
 /* --- Firefly Animation --- */
 .firefly-container {
   position: fixed;
