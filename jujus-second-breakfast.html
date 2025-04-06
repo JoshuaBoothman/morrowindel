@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JuJu's Second Breakfast</title>
+  <link rel="stylesheet" href="morrowindel-style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="p-6 sm:p-10">
+  <div class="firefly-container" aria-hidden="true"></div>
+
+  <main class="max-w-3xl mx-auto space-y-8 relative z-10">
+    <h1 class="text-6xl font-bold mb-8">JuJu's Second Breakfast</h1>
+
+   
+
+    <section>
+      <h2 class="text-4xl font-bold mt-8 mb-4">❄️ Cold Outside, Glow Within</h2>
+      <p>The morning was sharp with frostbite promises—mist clinging to the hills, the air crisp as cold apples. But inside <strong>Cobblestone Cottage</strong>, warmth curled around everything like a shawl. The fire in the hearth crackled cheerfully, its scent a blend of old wood, honey, and stories.</p>
+    </section>
+    <img
+      src="images/JuJus Second Breakfast.jpg"
+      alt="JuJu's Second Breakfast"
+      class="w-1/2 h-auto rounded-lg shadow-md my-4 mx-auto"
+    />
+    <section>
+      <h2 class="text-4xl font-bold mt-8 mb-4">🍯 The Honeydrizzle Queen Returns</h2>
+      <p>At the high seat near the table's edge sat <strong>JuJu the Pixie</strong>—small of stature, vast of spirit. Her eyes sparkled with that mischievous morning glint only reserved for second breakfasts.</p>
+      <p>Before her lay a plate fit for a forest queen:</p>
+      <ul class="list-disc ml-6 my-4">
+        <li><strong>Sunfruit rounds</strong> (a secret pancake recipe only <strong>Mama</strong> knew)</li>
+        <li><strong>Cloudmilk cream</strong> (soft and tart and perfect)</li>
+        <li>A generous <strong>drizzle of golden honey</strong> that glistened like fairy-thread</li>
+      </ul>
+      <p><strong>Pop Pop</strong> lifted her into place and bowed dramatically.</p>
+      <blockquote class="pl-4 border-l-4 italic border-yellow-400 my-4">“The Honeydrizzle Queen has returned!”</blockquote>
+      <p>JuJu giggled and took her first bite with royal reverence. <strong>Mama</strong>, the quiet keeper of the skillet, watched with a smile soft as butter melting on warm bread.</p>
+    </section>
+
+    <section>
+      <h2 class="text-4xl font-bold mt-8 mb-4">🐉 Buttercup the Brave, Stationed at the Gate</h2>
+      <p>Just a few steps away, on the other side of the hallway gate, sat <strong>Buttercup the Brave</strong>—a baby dragon of curly gold fuzz and flopsy ears.</p>
+      <p>She had not been exiled. She had been <em>stationed</em>—a noble post to prevent her from <em>leaping joyfully all over JuJu</em> mid-breakfast, which she was very good at.</p>
+      <p>Buttercup's snout pressed through the bars, her green eyes fixed on every spoonful with the solemn intensity of a guard at a royal feast.</p>
+      <blockquote class="pl-4 border-l-4 italic border-yellow-400 my-4">“After we visit Omberry, I'll give you double snuggles. Promise.”</blockquote>
+      <p>Buttercup blinked once, slowly. Her sacred vow of waiting was sealed.</p>
+    </section>
+
+    <section>
+      <h2 class="text-4xl font-bold mt-8 mb-4">🧣 Off to Omberry's in Lonchester</h2>
+      <p>As the sun rose higher, the morning's adventure called.</p>
+      <ul class="list-disc ml-6 my-4">
+        <li><strong>Maximillion</strong>, JuJu's radiant mother, was packing bags for the journey</li>
+        <li>Baby <strong>OonaBaboona</strong> was already bundled in her berrywrap</li>
+        <li><strong>Jophes</strong>, JuJu's gentle dad, kissed her crown before heading off to help those with soft voices and strong hearts</li>
+        <li>And far across the hills in <strong>Lonchester</strong>, the bustling city, <strong>Omberry</strong>—a flour-dusted grandmother full of warmth and cinnamon—was baking for their arrival</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="text-4xl font-bold mt-8 mb-4">🔥 And Still, the Cottage Held Them</h2>
+      <p>JuJu's plate was nearly clean. A ribbon of honey on her chin. Buttercup waited. The fire still danced. Mama wiped JuJu's face with a warm cloth. Pop Pop poured another coffee and said nothing at all.</p>
+      <p>Outside, the wind was cold.<br>But inside <strong>Cobblestone Cottage</strong>, something ancient and golden stirred—<br>A memory in the making.<br>A morning never to be exactly repeated.<br>A little myth born of honey, fire, and love.</p>
+    </section>
+
+    <hr class="my-10" />
+
+    <blockquote class="text-xl italic text-left">
+      “The hearth holds more than warmth—it holds the tale.”
+    </blockquote>
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const container = document.querySelector(".firefly-container");
+      container.innerHTML = "";
+      const numFireflies = 15;
+
+      for (let i = 0; i < numFireflies; i++) {
+        const firefly = document.createElement("span");
+        firefly.classList.add("firefly");
+
+        const startX = Math.random() * 100;
+        const startY = Math.random() * 100;
+        const moveX = (Math.random() - 0.5) * 40;
+        const moveY = (Math.random() - 0.5) * 60;
+        const delay = Math.random() * 10;
+        const duration = 8 + Math.random() * 10;
+
+        firefly.style.setProperty("--start-x", `${startX}vw`);
+        firefly.style.setProperty("--start-y", `${startY}vh`);
+        firefly.style.setProperty("--move-x", `${moveX}vw`);
+        firefly.style.setProperty("--move-y", `${moveY}vh`);
+        firefly.style.animationDelay = `${delay}s`;
+        firefly.style.animationDuration = `${duration}s`;
+
+        container.appendChild(firefly);
+      }
+    });
+  </script>
+</body>
+</html>
